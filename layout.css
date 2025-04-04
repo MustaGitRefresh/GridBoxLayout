@@ -1,0 +1,41 @@
+/* some basic modifications */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(73, 73, 142);
+}
+
+/* Actual styling starts with container div */
+
+.container {
+    width: 60vw;
+    height: 60vh;
+    padding: 20px;
+    margin: 20vh auto;
+    background-color: wheat;
+
+    /* ✅ Fix: Ensure grid does not exceed width */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /* Ensures items shrink properly */
+    gap: 20px;
+    overflow: hidden;
+    /* Ensures no content spills out */
+}
+
+.language {
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* ✅ Fix: Allow shrinking inside grid */
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+}
