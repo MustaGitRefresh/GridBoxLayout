@@ -28,14 +28,26 @@ body {
 }
 
 .language {
-    background-color: aquamarine;
+    background-color: antiquewhite;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    /* ✅ Fix: Allow shrinking inside grid */
     min-width: 0;
     max-width: 100%;
     overflow: hidden;
+}
+
+/* changing the download tag */
+.download {
+    text-decoration: none;
+    color: rgb(86, 86, 199);
+    margin: 16px auto;
+    border: 2px solid #eeeef2;
+    padding: 7px;
+    border-radius: 11px;
+    background-color: lightblue;
+    font-size: 0.8em;
+
 }
